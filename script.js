@@ -14,23 +14,27 @@ const fetchPokemon = () => {
         let pokeImg = data.sprites.front_default
         pokeImage(pokeImg);
 
-        let pokeName = data.name
-        console.log(pokeName)
+        pokeName.innerHTML = data.name
 
-        let pokeID = data.id
-        console.log(pokeID)
+        pokeNumber.innerHTML = data.id
 
-        let pokeHeight = parseInt(data.height)
-        let altura =  pokeHeight / 10;
-        console.log(`Altura: ${altura} metros`)
+        pokeHeight.innerHTML = parseInt(data.height) / 10
 
-        let pokeWeigh = parseInt(data.weight)
-        let pesoKilos = pokeWeigh / 10
-        console.log(`Peso: ${pesoKilos} Kg`)
+        pokeWeigh.innerHTML = parseInt(data.weight) / 10
 
-        let pokeTipo = data.types.type //pendiente
-        console.log(pokeTipo)
-        console.log(`Tipo: ${pokeTipo}`)
+        pokePS.innerHTML = data.stats[0].base_stat
+        pokeATK.innerHTML = data.stats[1].base_stat
+        pokeDEF.innerHTML = data.stats[2].base_stat
+        pokeSP_ATK.innerHTML = data.stats[3].base_stat
+        pokeSP_DEF.innerHTML = data.stats[4].base_stat
+        pokeSpeed.innerHTML = data.stats[5].base_stat
+
+        // let pokeTipo = data.types//pendiente
+        // console.log(pokeTipo)
+        // console.log(`Tipo: ${pokeTipo}`)
+        
+        console.log(data.types[0].type.name)
+        console.log(data.types[1].type.name)
     })
 }
 
