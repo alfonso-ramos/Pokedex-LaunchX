@@ -5,30 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="Style/main.css">
     <link rel="stylesheet" href="Style/normalize.css">
+    <link rel="stylesheet" href="Style/main.css">
     <title>Pokedex</title>
 </head>
 <body>
-    <h1>Pokedex</h1>
-    <input type="text" placeholder="Pokémon name" id="pokeNameInput" name="pokeNameInput">
-    <br>
-    <img src="pokeball.png" alt="Pokeball" id="pokeImg"
-    width="150px">
-    <p id="pokeNumber">#001</p>
-    <p id="pokeName">Nombre</p>
-    <p id="pokeHeight">Altura</p>
-    <p id="pokeWeigh">Peso</p>
-    <p id="pokePS">PS</p>
-    <p id="pokeATK">ATK</p>
-    <p id="pokeDEF">DEF</p>
-    <p id="pokeSP_ATK">SP-ATK</p>
-    <p id="pokeSP_DEF">SP-DEF</p>
-    <p id="pokeSpeed">Speed</p>
+    <header>
+        <h1>Pokédex</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h2>Escribe el nombre del Pokémon que deseas encontrar</h2>
+                <input type="text" placeholder="Pokémon name" id="pokeNameInput" name="pokeNameInput">
+            </div>
+            <br>
+            <img src="pokeball.png" alt="Pokeball" id="pokeImg"
+            width="150px">
+            <p>
+                No. #<span id="pokeNumber">000</span> <span id="pokeName">Nombre</span>
+            </p>
 
-    <p id="type"></p>
-    <br>
-    <button onclick="fetchPokemon()">Buscar Pokémon</button>
+
+            <span id="pokeHeight">Altura</span>
+            <span id="pokeWeigh">Peso</span>
+            <span id="pokePS">PS</span>
+            <span id="pokeATK">ATK</span>
+            <span id="pokeDEF">DEF</span>
+            <span id="pokeSP_ATK">SP-ATK</span>
+            <span id="pokeSP_DEF">SP-DEF</span>
+            <span id="pokeSpeed">Speed</span>
+
+            <p id="type"></p>
+            <br>
+            <button onclick="fetchPokemon()">Buscar Pokémon</button>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
