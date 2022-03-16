@@ -67,5 +67,13 @@ header{
     text-align: center;
 }
 main{
-    background-color: var(--blue);
+    text-align: center;
+    background-color: var(--softGrey);
+}
+.title{
+    line-height: 4rem;
+}
+.stats-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }

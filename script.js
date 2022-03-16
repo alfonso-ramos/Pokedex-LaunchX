@@ -29,12 +29,12 @@ const fetchPokemon = () => {
         pokeSP_DEF.innerHTML = data.stats[4].base_stat
         pokeSpeed.innerHTML = data.stats[5].base_stat
 
-        // let pokeTipo = data.types//pendiente
-        // console.log(pokeTipo)
-        // console.log(`Tipo: ${pokeTipo}`)
+        let pokeTipo = data.types//pendiente
+        console.log(pokeTipo)
+        console.log(`Tipo: ${pokeTipo}`)
         
-        console.log(data.types[0].type.name)
-        console.log(data.types[1].type.name)
+        type1.innerHTML = data.types[0].type.name
+        type2.innerHTML = data.types[1].type.name
     })
 }
 
