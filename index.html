@@ -15,36 +15,75 @@
     </header>
     <main>
         <div class="container">
-            <div>
-                <h2 class="title">Escribe el nombre del Pokémon que deseas encontrar</h2>
-                <input type="text" placeholder="Pokémon name" id="pokeNameInput" name="pokeNameInput">
+            <div class="pokedex-shadow">
+                <div class="pokedex-body">
+                    <div class="pokedex-container-left">
+                        <div class="pokedex-lights">
+                            <div class="pokedex-main-light__ring">
+                                <div class="pokedex-main-light">
+                                </div>
+                            </div>
+                            <div class="pokedex-lights-container">
+                                <div class="pokedex-light-red"></div>
+                                <div class="pokedex-light-yellow"></div>
+                                <div class="pokedex-light-green"></div>
+                            </div>
+                        </div>
+                        <div class="pokemon-screen-border">
+                            <div class="pokemon-screen">
+                                <img src="pokeball.png" alt="Pokeball" id="pokeImg"
+                                width="150px">
+                                <p>
+                                    #<span id="pokeNumber"></span>
+                                    <p id="pokeName"></p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="search-container">
+                            <div>
+                                <input type="text" placeholder="Pokémon name" id="pokeNameInput" name="pokeNameInput">
+                            </div>
+                            <button onclick="fetchPokemon()">Buscar Pokémon</button>
+                        </div>
+                    </div>
+                    <div class="pokedex-container-right">
+                        <div class="screen-stats">
+                            <div class="stats-container">
+                                <p>Altura: <span id="pokeHeight"></span> m</p>
+                                <p>Peso: <span id="pokeWeigh"></span> Kg</p>
+                                <p>PS: <span id="pokePS"></span></p>
+                                <p>ATK: <span id="pokeATK"></span></p>
+                                <p>DEF: <span id="pokeDEF"></span></p>
+                                <p>SP-ATK: <span id="pokeSP_ATK"></span></p>
+                                <p>SP-DEF: <span id="pokeSP_DEF"></span></p>
+                                <p>Velocidad: <span id="pokeSpeed"></span></p>
+                            </div>
+                        </div>
+                        <div class="botones">
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                            <div class="boton"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br>
-            <img src="pokeball.png" alt="Pokeball" id="pokeImg"
-            width="150px">
-            <p>
-                <p id="pokeName">Nombre</p>
-                No. #<span id="pokeNumber">000</span> 
-            </p>
-
-            <div class="stats-container">
-                <p>Altura: <span id="pokeHeight"></span> m</p>
-                <p>Peso: <span id="pokeWeigh"></span> Kg</p>
-                <p>PS: <span id="pokePS"></span></p>
-                <p>ATK: <span id="pokeATK"></span></p>
-                <p>DEF: <span id="pokeDEF"></span></p>
-                <p>SP-ATK: <span id="pokeSP_ATK"></span></p>
-                <p>SP-DEF: <span id="pokeSP_DEF"></span></p>
-                <p>Velocidad: <span id="pokeSpeed"></span></p>
-            </div>
-
+            <!-- <br>
             <p id="type1"></p>
             <p id="type2"></p>
-            <br>
-            <button onclick="fetchPokemon()">Buscar Pokémon</button>
+            <br> -->
         </div>
     </main>
-
+    <footer>
+        <p>Hecho por: Poncho Ramos</p> 
+        <p>Repositorio del proyecto <a href="https://github.com/alfonso-ramos/Pokedex-LaunchX">aqui</a> </p> 
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
