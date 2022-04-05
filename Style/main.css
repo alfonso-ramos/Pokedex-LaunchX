@@ -4,6 +4,14 @@
     --grey: #383D3B;
     --softGrey: #F4F2F3;
     --purple: #3D3A4B;
+
+    /* Pokedex Colors */
+    --shadow: #82091e;
+    --body: #bd0f34;
+    --mainLight: #0bcdff;
+    --redLight: #ec0a0b;
+    --yellowLight: #e2e514;
+    --greenLight: #72db19;
 }
 html{
     box-sizing: border-box;
@@ -57,8 +65,53 @@ img{
 .text-center{
     text-align: center;
 }
+/* Pokedex art */
+.pokedex-shadow{
+    height: 20rem;
+    background-color: var(--shadow);
+}
+.pokedex-body{
+    background-color: var(--body);
+    height: 15rem;
+}
+.pokedex-lights{
+    display: flex;
+}
+.pokedex-main-light__ring{
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    border-radius: 5rem;
+}
+.pokedex-main-light{
+    background-color: var(--mainLight);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5rem;
+}
+.pokedex-lights-container{
+    display: flex;
+}
+.pokedex-light-red{
+    background-color: var(--redLight);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+}
+.pokedex-light-yellow{
+    background-color: var(--yellowLight);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+}
+.pokedex-light-green{
+    background-color: var(--greenLight);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+}
 /* Header section */
-
 header{
     background-color: var(--red);
     color: #F4F2F3;
