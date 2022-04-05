@@ -12,6 +12,9 @@
     --redLight: #ec0a0b;
     --yellowLight: #e2e514;
     --greenLight: #72db19;
+
+    --ScreenBorder: #dedede;
+    --ScreenStats: #032d29;
 }
 html{
     box-sizing: border-box;
@@ -32,6 +35,7 @@ body{
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
+    margin-top: 4rem;
 }
 a{
     text-decoration: none;
@@ -67,20 +71,23 @@ img{
 }
 /* Pokedex art */
 .pokedex-shadow{
-    height: 20rem;
+    height: auto;
+    padding: 0 0 1.5rem 1rem;
     background-color: var(--shadow);
 }
 .pokedex-body{
     background-color: var(--body);
-    height: 15rem;
+    height: auto;
+    padding: 2rem;
 }
 .pokedex-lights{
     display: flex;
+    margin-bottom: 4rem;
 }
 .pokedex-main-light__ring{
     background-color: white;
-    width: 10rem;
-    height: 10rem;
+    width: 8.5rem;
+    height: 8.5rem;
     position: relative;
     border-radius: 5rem;
 }
@@ -89,6 +96,9 @@ img{
     width: 7rem;
     height: 7rem;
     border-radius: 5rem;
+    position: relative;
+    left: 1rem;
+    top: .5rem;
 }
 .pokedex-lights-container{
     display: flex;
@@ -111,6 +121,58 @@ img{
     height: 3rem;
     border-radius: 5rem;
 }
+.pokemon-screen-border{
+    background-color: var(--ScreenBorder);
+    border-radius: 2rem;
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+.pokemon-screen{
+    background-color: white;
+    padding: 2rem;
+    width: 28rem;
+}
+.search-container{
+    margin: 4rem 0;
+}
+.search-container button{
+    background-color: var(--blue);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 1rem;
+    height: 4rem;
+    padding: 0 3rem;
+    margin-top: 2rem;
+}
+.screen-stats{
+    background-color: var(--ScreenStats);
+    border-radius: 2rem;
+    margin-top: 4rem;
+    color: var(--yellowLight);
+}
+@media (min-width: 768px){
+    .pokedex-body{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+    .stats-container{
+        margin-top: 15rem;
+    }
+    .botones{
+        padding-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+    .boton{
+        background-color: var(--mainLight);
+        min-width: 5.8rem;
+        min-height: 5.8rem;
+        border: 2px solid var(--blue);
+    }
+}
 /* Header section */
 header{
     background-color: var(--red);
@@ -130,4 +192,17 @@ main{
 .stats-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+footer{
+    background-color: var(--purple);
+    color: white;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 4rem 0 ;
+}
+footer p {
+    margin: 0;
+}
+footer a{
+    color: var(--mainLight);
 }
